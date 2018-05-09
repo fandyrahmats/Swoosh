@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LeagueActivity">
+    tools:context=".Controller.LeagueActivity">
 
     <ImageView
         android:id="@+id/imageView4"
@@ -76,12 +76,12 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4">
 
         <ToggleButton
-            android:id="@+id/toggleButton"
+            android:id="@+id/tgl_btn_mens"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/custom_toggle_button"
-            android:checked="true"
             android:fontFamily="@font/montserrat"
+            android:onClick="onMensClicked"
             android:text="@string/mens"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textColor="@android:color/white"
@@ -90,13 +90,14 @@
             android:textSize="18sp" />
 
         <ToggleButton
-            android:id="@+id/toggleButton2"
+            android:id="@+id/tgl_btn_womens"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/custom_toggle_button"
             android:fontFamily="@font/montserrat"
+            android:onClick="onWomensClicked"
             android:text="@string/womens"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textColor="@android:color/white"
@@ -105,11 +106,12 @@
             android:textSize="18sp" />
 
         <ToggleButton
-            android:id="@+id/toggleButton3"
+            android:id="@+id/tgl_btn_coed"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/custom_toggle_button"
             android:fontFamily="@font/montserrat"
+            android:onClick="onCoedClicked"
             android:text="@string/co_ed"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textColor="@android:color/white"

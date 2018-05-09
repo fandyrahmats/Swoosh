@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SkillActivity">
+    tools:context=".Controller.SkillActivity">
 
     <ImageView
         android:id="@+id/imageView5"
@@ -56,13 +56,14 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5">
 
         <ToggleButton
-            android:id="@+id/toggleButton4"
+            android:id="@+id/tgl_btn_beginner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="16dp"
             android:layout_weight="1"
             android:background="@drawable/custom_toggle_button"
             android:fontFamily="@font/montserrat"
+            android:onClick="onBeginnerClicked"
             android:text="Beginner"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textColor="@android:color/white"
@@ -71,11 +72,13 @@
             android:textSize="18sp" />
 
         <ToggleButton
+            android:id="@+id/tgl_btn_baller"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/custom_toggle_button"
             android:fontFamily="@font/montserrat"
+            android:onClick="onBallerClicked"
             android:text="ToggleButton"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textColor="@android:color/white"
@@ -93,6 +96,7 @@
         android:layout_marginStart="16dp"
         android:background="@drawable/custom_button"
         android:fontFamily="@font/montserrat"
+        android:onClick="intentFinishActivityClicked"
         android:text="Finish"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:textColor="@android:color/white"
